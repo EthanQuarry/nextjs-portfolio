@@ -1,18 +1,25 @@
 import { format, parseISO } from 'date-fns'
 import { allPosts } from 'contentlayer/generated'
 
-export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post._raw.flattenedPath }))
-
+export async function generateStaticParams() {
+    return allPosts.map((post) => ({
+        slug: post.slugAsParams,
+    }));
+}
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
-    const post = allPosts.find((post) => post.slug === params.slug || post._raw.flattenedPath === `blog/${params.slug}`)
+    const post = allPosts.find((post) => post.slug === params.slug)
     if (!post) throw new Error(`Post not found for slug: ${params.slug}`)
     return { title: post.title }
 }
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {
-    const post = allPosts.find((post) => post._raw.flattenedPath === `blog/${params.slug}`)
+    const post = allPosts.find((post) => post.slugAsParams === params.slug);
     if (!post) throw new Error(`Post not found for slug: ${params.slug}`)
 
+    if (!post) {
+        // Handle the case when the post is not found
+        return <div>Post not found</div>;
+    }
     return (
         <article className="mx-auto max-w-xl py-8">
             <div className="mb-8 text-center">
