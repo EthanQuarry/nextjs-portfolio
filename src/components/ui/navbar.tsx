@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
                 </Link>
                 <ul className="flex space-x-6">
                     <li>
-                        <CustomLink href="/projects" className="opacity-60 hover:opacity-100">
+                        <CustomLink href="/questions/roblox-built-with-rust" className="opacity-60 hover:opacity-100">
                             Questions
                         </CustomLink>
                     </li>

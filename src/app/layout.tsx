@@ -3,7 +3,7 @@ import "./globals.css";
 import MaxWidthWrapper from "@/components/shared/max-width-wrapper";
 import { constructMetadata } from "@/lib/utils";
 
-export const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = constructMetadata();
 

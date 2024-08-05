@@ -7,9 +7,9 @@ interface LightTextProps {
 
 const LightText: React.FC<LightTextProps> = ({ children, className = '' }) => {
     return (
-        <p className={`text-[#7d7d7d] ${className}`}>
+        <span className={`text-[#7d7d7d] ${className}`}>
             {children}
-        </p>
+        </span>
     );
 };
 

@@ -7,6 +7,7 @@ import { allPosts, Post as ContentLayerPost } from 'contentlayer/generated'
 import { Post } from '@/types/index'
 import { compareDesc } from 'date-fns';
 import Navbar from "@/components/ui/navbar";
+import CustomLink from "@/components/ui/link";
 
 export default function Home() {
   const posts: Post[] = allPosts.map(post => ({
@@ -20,10 +21,10 @@ export default function Home() {
       </header>
       <main className="w-full max-w-2xl">
         <SectionWithOffset title="Bio">
-          <p className="mb-4 font-semibold">Hi, I'm Ethan – a seventeen year old software engineer.</p>
-          <p className="mb-4">I'm currently building <a href="#" className="text-accent-rgb">Overtone</a>, a local-first music app that unifies your music library across various streaming services (Spotify, Youtube, ...) and personal collections.</p>
-          <p className="mb-4">I love the craft of software engineering and run the <a href="#" className="text-accent-rgb">localfirst.fm podcast</a>. I'm also involved in the <a href="#" className="text-accent-rgb">Effect</a> TypeScript ecosystem. Previously, I founded <a href="#" className="text-accent-rgb">Prisma</a> with the goal to make working with databases easier.</p>
-          <p>I also enjoy <a href="#" className="text-accent-rgb">helping founders</a> on their journeys building developer-focussed products and companies.</p>
+          <p className="mb-4 font-semibold">Hi, I'm Ethan – a seventeen year old software engineer living in Ireland.</p>
+          <p className="mb-4">I'm currently trying to land a fulltime software engineering role, so I can nail it to the top of my <CustomLink href="https://mit.edu">MIT</CustomLink>/<CustomLink href="https://stanford.edu">Standford</CustomLink> application.</p>
+          <p className="mb-4">Once I have a fulltime role, I'll spend the next 6-8 months building my own startup and at somepoint sell it for millions so I can have a strong chance of getting into a top university.</p>
+          <p>Don't worry I'm not all ambition and no action, I've got a pretty good plan.</p>
         </SectionWithOffset>
 
         <SectionWithOffset title="Posts">
