@@ -3,9 +3,9 @@ import { SidebarNavItem, SiteConfig } from "@/types";
 const site_url = process.env.NEXT_PUBLIC_APP_URL;
 
 export const siteConfig: SiteConfig = {
-    name: "Solution Lair",
+    name: "Ethan Quarry",
     description:
-        "SolutionLair",
+        "Ethan Quarry - Software Engineer",
     url: site_url || "http://localhost:3000",
     ogImage: `${site_url}/_static/og.jpg`,
     links: {
@@ -17,7 +17,7 @@ export const siteConfig: SiteConfig = {
 
 export const footerLinks: SidebarNavItem[] = [
     {
-        title: "Solution Lair",
+        title: "Ethan Quarry",
         items: [
             { title: "About", href: "#" },
             { title: "Enterprise", href: "#" },

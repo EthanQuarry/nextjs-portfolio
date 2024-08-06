@@ -1,5 +1,6 @@
 import { format, parseISO } from 'date-fns'
 import { allPosts } from 'contentlayer/generated'
+import { Mdx } from '@/components/content/mdx-component';
 
 export async function generateStaticParams() {
     return allPosts.map((post) => ({
@@ -21,14 +22,17 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         return <div>Post not found</div>;
     }
     return (
-        <article className="mx-auto max-w-xl py-8">
-            <div className="mb-8 text-center">
-                <time dateTime={post.date} className="mb-1 text-xs text-gray-600">
+        <article className="mx-auto max-w-xl">
+            <div className="flex flex-col items-end mb-8 text-center">
+
+                <h1 className="text-2xl">{post.title}</h1>
+                <time dateTime={post.date} className="mb-1 text-[#4e4343] text-xs ">
                     {format(parseISO(post.date), 'LLLL d, yyyy')}
                 </time>
-                <h1 className="text-3xl font-bold">{post.title}</h1>
             </div>
-            <div className="[&>*]:mb-3 [&>*:last-child]:mb-0" dangerouslySetInnerHTML={{ __html: post.body.html }} />
+            <div className="px-[.8rem] pb-10 md:px-8">
+                <Mdx code={post.body.code} />
+            </div>
         </article>
     )
 }

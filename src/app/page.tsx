@@ -1,18 +1,16 @@
 'use client';
-import MaxWidthWrapper from "@/components/shared/max-width-wrapper";
 import RecentPosts from "@/components/content/posts";
 import Achievements from "@/components/content/achievements";
 import SectionWithOffset from "@/components/shared/section-offset-title";
-import { allPosts, Post as ContentLayerPost } from 'contentlayer/generated'
-import { Post } from '@/types/index'
+import { allPosts } from 'contentlayer/generated';
+import { Post } from '@/types/index';
 import { compareDesc } from 'date-fns';
-import Navbar from "@/components/ui/navbar";
 import CustomLink from "@/components/ui/link";
 
 export default function Home() {
   const posts: Post[] = allPosts.map(post => ({
     ...post,
-    body: { raw: post.body?.raw ?? '', html: post.body?.html ?? '' }
+    body: { raw: post.body?.raw ?? '', html: post.body?.raw ?? '' }
   })).sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
   return (
     <main className="">
@@ -31,10 +29,10 @@ export default function Home() {
         title="Achievements"
       >
         <Achievements achievements={[
-          { title: "voxelize", description: "build your own minecraft in < 500 lines of code", link: "#" },
-          { title: "typehere.app", description: "textarea with vim (with workspaces and ⌘ K)", link: "#" },
-          { title: "inko.cat", description: "building blocks for productivity w/ @guo_hq", link: "#" },
-          { title: "DMCA copyright strike from Microsoft", description: "2.8k stars!!", link: "#" },
+          { title: "100m", description: "At some point was the 7th fastest U18 in Ireland at 15", link: "#" },
+          { title: "Martial Artist", description: "Somehow got a black belt in KSW at 11", link: "https://www.kuksoolwon.com/" },
+          { title: "Munster Rugby", description: "Played with the munster rugby underage until crippling injuries set in", link: "https://www.munsterrugby.ie/" },
+          { title: "Software Engineer", description: "At 17, will know for sure on the 16/08/24, hopefully 🤞", link: "#" },
         ]} />
       </SectionWithOffset>
     </main>

@@ -20,11 +20,6 @@ const Navbar: React.FC = () => {
                 </Link>
                 <ul className="flex space-x-6">
                     <li>
-                        <CustomLink href="/questions" className={isActive('/questions')}>
-                            Questions
-                        </CustomLink>
-                    </li>
-                    <li>
                         <CustomLink href="/quotes" className={isActive('/quotes')}>
                             Quotes
                         </CustomLink>
@@ -32,6 +27,11 @@ const Navbar: React.FC = () => {
                     <li>
                         <CustomLink href="/blog" className={isActive('/blog')}>
                             Blog
+                        </CustomLink>
+                    </li>
+                    <li>
+                        <CustomLink href="/questions" className={isActive('/questions')}>
+                            Questions
                         </CustomLink>
                     </li>
                 </ul>
