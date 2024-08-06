@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Portfolio Site with Blog and Questions
+
+This project is a modern, performant portfolio website built with Next.js, featuring a blog and a questions section. It leverages the power of static site generation (SSG) and content management using MDX files.
+
+## Features
+
+- **Blog**: A section to showcase your articles and thoughts.
+- **Questions**: A dedicated area for Q&A or frequently asked questions.
+- **MDX Content**: Utilizes MDX for content management, allowing for rich, interactive content.
+- **Static Site Generation**: Improves performance and SEO by pre-rendering pages at build time.
+- **Responsive Design**: Ensures a great user experience across various devices and screen sizes.
+
+## Tech Stack
+
+- **Next.js**: React framework for building the user interface and handling routing.
+- **TypeScript**: Adds static typing to JavaScript for improved developer experience and code quality.
+- **Contentlayer**: Used for content management and processing MDX files.
+- **date-fns**: Library for date formatting and parsing.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+
+## Project Structure
+
+- `src/app`: Contains the main application code, including page components and layouts.
+- `src/content`: Stores MDX files for blog posts and questions.
+- `src/components`: Reusable React components, including the MDX renderer.
+- `contentlayer.config.ts`: Configuration for Contentlayer, defining document types and content processing.
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies: `npm install` or `yarn install`
+3. Run the development server: `npm run dev` or `yarn dev`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Adding Content
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- To add a new blog post, create an MDX file in `src/content/blog/`
+- To add a new question, create an MDX file in `src/content/questions/`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Ensure each MDX file includes the required frontmatter (title and date).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Customization
 
-## Learn More
+You can easily customize the site by modifying the components in `src/components` and adjusting the styles using Tailwind CSS classes.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This site can be easily deployed to platforms like Vercel or Netlify, which support Next.js out of the box.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is open source and available under the [MIT License](LICENSE).
