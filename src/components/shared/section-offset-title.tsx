@@ -14,11 +14,11 @@ interface SectionWithOffsetProps {
 const SectionWithOffset: React.FC<SectionWithOffsetProps> = ({
     title,
     children,
-    titleClassName = "w-28 flex-shrink-0 font-light text-foreground-rgb opacity-50 text-md text-right",
+    titleClassName = "md:w-28  flex-shrink-0 font-light text-foreground-rgb opacity-50 text-md md:text-right",
     contentClassName = "flex-grow text-md"
 }) => {
     return (
-        <div className={`flex flex-row space-x-4 mb-8 ${inter.className}`}>
+        <div className={`flex flex-col md:flex-row space-x-4 mb-8 ${inter.className}`}>
             <LightText className={`font-semibold ${titleClassName}`}>
                 {title}
             </LightText>
