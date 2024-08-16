@@ -8,6 +8,7 @@ const quotes = [
     { text: "There is absolutely nothing you're supposed to be doing.", author: "Eckhart Tolle" },
     { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
     { text: "The unexamined life is not worth living.", author: "Socrates" },
+    { text: "A smooth sea never made a skilled sailor.", author: "Roosevelt" },
 ]
 
 export default function QuotesPage() {
