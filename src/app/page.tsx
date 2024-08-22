@@ -32,7 +32,7 @@ export default function Home() {
           { title: "100m", description: "At some point was the 7th fastest U18 in Ireland at 15", link: "#" },
           { title: "Martial Artist", description: "Somehow got a black belt in KSW at 11", link: "https://www.kuksoolwon.com/" },
           { title: "Munster Rugby", description: "Played with the munster rugby underage until crippling injuries set in", link: "https://www.munsterrugby.ie/" },
-          { title: "Software Engineer", description: "At 17, will know for sure on the 16/08/24, hopefully 🤞", link: "#" },
+          { title: "Software Engineer", description: "At 17, will know for sure on the 16/08/24, hopefully 🤞 (#confirmed we got the job)", link: "#" },
         ]} />
       </SectionWithOffset>
     </main>
