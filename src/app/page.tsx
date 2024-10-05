@@ -15,8 +15,8 @@ export default function Home() {
   return (
     <main className="">
       <SectionWithOffset title="Bio">
-        <p className="mb-4 font-semibold">Hi, I'm Ethan – a seventeen year old software engineer living in Ireland.</p>
-        <p className="mb-4">I just landed a software engineering role at a funded startup (contract), so I can now nail it to the top of my <CustomLink href="https://mit.edu">MIT</CustomLink>/<CustomLink href="https://stanford.edu">Standford</CustomLink> application.</p>
+        <p className="mb-4 font-semibold">Hi, I'm Ethan – a eighteen year old software engineer living in Ireland.</p>
+        <p className="mb-4">I just landed a software engineering role at a funded startup (contract), so I can now nail it to the top of my <CustomLink href="https://stanford.edu">Standford</CustomLink> application.</p>
         <p className="mb-4">Now, I plan spend the next 6-8 months building my own startup in my free time with the goal of getting acquired as soon as possible, similiar to <CustomLink href="https://brev.dev" target="_blank">Brev.dev</CustomLink> so I can have a strong chance of getting into a top university.</p>
         <p>Don't worry I'm not all ambition and no action, I've got a pretty good plan.</p>
       </SectionWithOffset>
