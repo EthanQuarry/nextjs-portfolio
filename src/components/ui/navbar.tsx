@@ -30,8 +30,8 @@ const Navbar: React.FC = () => {
                         </CustomLink>
                     </li>
                     <li>
-                        <CustomLink href="/questions" className={isActive('/questions')}>
-                            Questions
+                        <CustomLink href="/link" className={isActive('/link')}>
+                            Useful Links
                         </CustomLink>
                     </li>
                 </ul>

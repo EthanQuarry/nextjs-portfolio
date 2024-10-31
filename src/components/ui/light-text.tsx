@@ -9,7 +9,7 @@ interface LightTextProps {
 }
 
 const LightText: React.FC<LightTextProps> = ({ children, className = '', underline = false, href }) => {
-    const baseClasses = `text-[#4e4343] ${className}`;
+    const baseClasses = `text-[#9c8f8f] ${className}`;
 
     if (underline) {
         return (
