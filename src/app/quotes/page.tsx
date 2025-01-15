@@ -11,6 +11,7 @@ const quotes = [
     { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
     { text: "The unexamined life is not worth living.", author: "Socrates" },
     { text: "A smooth sea never made a skilled sailor.", author: "Roosevelt" },
+    { text: "One of the most powerful lessons failure teaches is how fast uninformed optimisim turns into informed pessimism.", author: "Ethan" },
 ]
 
 export default function QuotesPage() {
