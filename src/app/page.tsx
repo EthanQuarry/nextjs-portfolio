@@ -16,9 +16,9 @@ export default function Home() {
     <main className="">
       <SectionWithOffset title="Bio">
         <p className="mb-4 font-semibold">Hi, I'm Ethan – an eighteen-year-old software engineer based in Ireland.</p>
-        <p className="mb-4">After landing a role at a funded startup, I've now ventured into building my own project, driven by the ambition to scale it into something remarkable for my <CustomLink href="https://stanford.edu">Stanford</CustomLink> application.</p>
-        <p className="mb-4">For the next 6-8 months, I'll be focused on growing this startup, with an eye on creating something acquisition-worthy. I’ve already seen promising early interest from notable figures, hinting that the potential is there.</p>
-        <p className="mb-4">If things continue on this trajectory, who knows what might be next… 🫨</p>
+        <p className="mb-4">I'm currently working with the awesome team @ <CustomLink href="https://naviro.io">Naviro</CustomLink> to build the AI agent for audiences.</p>
+        <p className="mb-4">After <CustomLink href="https://hackireland.com">HackIreland</CustomLink>, I'm now working on building automated internal documentation after an engineering manager @ <CustomLink href="https://tines.com">Tines</CustomLink> said they would use the product I pitched.</p>
+        <p className="mb-4">But for the moment I'm really focusing on work and making sure I provide the best ROI for them hiring an 18 year old.</p>
       </SectionWithOffset>
 
 
