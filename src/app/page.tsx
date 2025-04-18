@@ -17,7 +17,7 @@ export default function Home() {
       <SectionWithOffset title="Bio">
         <p className="mb-4 font-semibold">Hi, I'm Ethan – an eighteen-year-old software engineer based in Ireland.</p>
         <p className="mb-4">I'm currently working with the awesome team @ <CustomLink href="https://naviro.io">Naviro</CustomLink> to build the AI agent for audiences.</p>
-        <p className="mb-4">After <CustomLink href="https://hackireland.com">HackIreland</CustomLink>, I'm now working on building automated internal documentation after an engineering manager @ <CustomLink href="https://www.independent.ie/business/technology/new-irish-unicorn-as-tines-raises-121m-at-valuation-of-11bn/a1925957704.html#:~:text=Tines%2C%20the%20Dublin%2Dbased%20software,m%20(%E2%82%AC263.4m).">Tines</CustomLink> said they would use the product I pitched.</p>
+        <p className="mb-4">After <CustomLink href="https://hackireland.com">HackIreland</CustomLink>, I'm now working on building automated internal documentation after an engineering manager @ <CustomLink href="https://www.tines.com/blog/series-c-fundraise/">Tines</CustomLink> said they would use the product I pitched.</p>
         <p className="mb-4">But for the moment I'm really focusing on work and making sure I provide the best ROI for them hiring an 18 year old.</p>
       </SectionWithOffset>
 
