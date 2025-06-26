@@ -33,7 +33,7 @@ export default function Home() {
           { title: "HackIreland", description: "Selected for Ireland's first national hackathon from a competitive pool of 500+ university applicants, despite not being a college student (27% acceptance rate)", link: "https://hackireland.com" },
           { title: "Software Engineer", description: "Working @ Naviro with the best team in the world", link: "#" },
           { title: "Hackathon Winner", description: "Won an NDRC startup sprint competition which got me tickets to web summit 2025", link: "https://www.linkedin.com/posts/cajbarrett_congratulations-to-the-winners-from-the-activity-7294664796350664705-eKw5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEJ33zIBaC4DVxVEKgGaoO7n5UrAiLzr8Tc" },
-          { title: "Founder", description: "Of an EdTech startup", link: "https://studypoo.ie" },
+          { title: "Founder", description: "Of an EdTech startup", link: "https://www.tella.tv/video/nextgrade-intro-video-btjh" },
           { title: "100m", description: "At some point was the 7th fastest U18 in Ireland at 15", link: "#" },
           { title: "Munster Rugby", description: "Played with the munster rugby underage until crippling injuries set in", link: "https://www.munsterrugby.ie/" },
         ]} />
