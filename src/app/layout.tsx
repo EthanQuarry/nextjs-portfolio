@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 import { Inter } from "next/font/google";
 import "./globals.css";
 import MaxWidthWrapper from "@/components/shared/max-width-wrapper";
@@ -22,6 +23,7 @@ export default function RootLayout({
             <Navbar />
           </header>
           {children}
+          <Analytics />
         </MaxWidthWrapper>
       </body>
     </html>
