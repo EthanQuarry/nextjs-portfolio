@@ -5,7 +5,6 @@ import SectionWithOffset from "@/components/shared/section-offset-title";
 import { allPosts } from 'contentlayer/generated';
 import { Post } from '@/types/index';
 import { compareDesc } from 'date-fns';
-import CustomLink from "@/components/ui/link";
 
 export default function Home() {
   const posts: Post[] = allPosts.map(post => ({
@@ -29,7 +28,7 @@ export default function Home() {
       >
         <Achievements achievements={[
           { title: "YC AI Startup School", description: "cool talks met loads of fun people", link: "https://www.linkedin.com/posts/ethanquarry_what-a-fcking-week-from-meeting-sam-altman-activity-7341316035012104192-jZjQ?utm_source=share&utm_medium=member_ios&rcm=ACoAAEJ33zIBaC4DVxVEKgGaoO7n5UrAiLzr8Tc" },
-          { title: "Grantee", description: "25k AWS credits, dm if you want some claude credits", link: "https://" },
+          { title: "Grantee", description: "25k AWS credits, dm if you want some claude credits", link: "https://x.com/Ethanldq" },
           { title: "HackIreland", description: "Selected for Ireland's first national hackathon from a competitive pool of 500+ university applicants, despite not being a college student (27% acceptance rate)", link: "https://hackireland.com" },
           { title: "Software Engineer", description: "@ Naviro", link: "https://naviro.ai" },
           { title: "Hackathon Winner", description: "Won an NDRC startup sprint competition which got me tickets to web summit 2025", link: "https://www.linkedin.com/posts/cajbarrett_congratulations-to-the-winners-from-the-activity-7294664796350664705-eKw5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEJ33zIBaC4DVxVEKgGaoO7n5UrAiLzr8Tc" },
