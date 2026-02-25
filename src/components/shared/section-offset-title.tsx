@@ -11,14 +11,11 @@ const SectionWithOffset: React.FC<SectionWithOffsetProps> = ({
     title,
     children,
     titleClassName,
-    contentClassName = "flex-grow text-md"
+    contentClassName = "flex-grow"
 }) => {
     return (
         <div className="flex flex-col md:flex-row gap-4 mb-8">
-            <div
-                className={titleClassName || "md:w-24 shrink-0 text-xs uppercase tracking-wider font-medium pt-1"}
-                style={{ color: 'var(--text-muted)' }}
-            >
+            <div className={titleClassName || "md:w-24 shrink-0 text-[12px] uppercase tracking-[0.08em] text-[#555] md:text-right pt-0.5 font-medium"}>
                 {title}
             </div>
             <div className={contentClassName}>

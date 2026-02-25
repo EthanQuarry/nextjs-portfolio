@@ -10,33 +10,26 @@ interface RecentPostsProps {
 
 const PostCard: React.FC<{ post: Post }> = ({ post }) => {
     return (
-        <div className="flex flex-col mb-3 cursor-pointer group">
-            <div className="flex justify-between items-center py-1">
-                <h2>
-                    <Link
-                        href={`/blog/${post.slug}`}
-                        className="text-[14px] font-medium custom-underline"
-                        style={{ color: 'var(--text-primary)' }}
-                    >
-                        {post.title}
-                    </Link>
-                </h2>
-                <time
-                    dateTime={post.date}
-                    className="text-xs shrink-0 ml-4"
-                    style={{ color: 'var(--text-muted)' }}
-                >
-                    {format(parseISO(post.date), 'MMM yyyy')}
-                </time>
-            </div>
-            <div className="w-full h-px mt-1" style={{ background: 'var(--border-subtle)' }} />
+        <div className="flex justify-between items-baseline py-1.5">
+            <Link
+                href={`/blog/${post.slug}`}
+                className="text-[14px] text-[#ededed] hover:text-white transition-colors"
+            >
+                {post.title}
+            </Link>
+            <time
+                dateTime={post.date}
+                className="text-[12px] text-[#333] shrink-0 ml-4 tabular-nums"
+            >
+                {format(parseISO(post.date), 'MMM yyyy')}
+            </time>
         </div>
     )
 }
 
 const RecentPosts: React.FC<RecentPostsProps> = ({ posts }) => {
     return (
-        <div className="mb-4">
+        <div>
             {posts.map((post, index) => (
                 <PostCard key={index} post={post} />
             ))}

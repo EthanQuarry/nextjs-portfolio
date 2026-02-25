@@ -9,21 +9,17 @@ interface Achievement {
 
 const Achievements: React.FC<{ achievements: Achievement[] }> = ({ achievements }) => {
     return (
-        <div className="flex flex-col">
+        <div className="space-y-2">
             {achievements.map((achievement, index) => (
-                <div key={index} className="achievement-row flex items-baseline gap-3">
+                <div key={index} className="flex items-baseline gap-3">
                     <Link
                         href={achievement.link}
                         target="_blank"
-                        className="text-[14px] font-medium shrink-0 custom-underline"
-                        style={{ color: 'var(--text-primary)' }}
+                        className="text-[14px] text-[#ededed] hover:text-white transition-colors shrink-0"
                     >
                         {achievement.title}
                     </Link>
-                    <span
-                        className="text-[14px]"
-                        style={{ color: 'var(--text-muted)' }}
-                    >
+                    <span className="text-[13px] text-[#444]">
                         {achievement.description}
                     </span>
                 </div>

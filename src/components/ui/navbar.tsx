@@ -7,35 +7,26 @@ import { usePathname } from 'next/navigation'
 const Navbar: React.FC = () => {
     const pathname = usePathname()
 
-    const isActive = (path: string) => {
-        return pathname === path
-            ? 'text-[var(--text-primary)]'
-            : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]';
-    };
+    const linkClass = (path: string) =>
+        pathname === path
+            ? 'text-[#ededed]'
+            : 'text-[#555] hover:text-[#999]';
 
     return (
-        <nav className="py-4">
-            <div className="container mx-auto flex flex-col items-center">
-                <Link href="/" className="text-xl font-semibold tracking-tight text-white mb-4">
-                    Ethan Quarry
+        <nav className="w-full flex flex-col sm:flex-row items-center sm:justify-between gap-4 py-2">
+            <Link href="/" className="text-[15px] font-medium text-white tracking-[-0.01em]">
+                Ethan Quarry
+            </Link>
+            <div className="flex gap-6 text-[13px]">
+                <Link href="/quotes" className={`transition-colors ${linkClass('/quotes')}`}>
+                    Quotes
                 </Link>
-                <ul className="flex space-x-6 text-sm">
-                    <li>
-                        <Link href="/quotes" className={`transition-colors duration-200 ${isActive('/quotes')}`}>
-                            Quotes
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/blog" className={`transition-colors duration-200 ${isActive('/blog')}`}>
-                            Blog
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/link" className={`transition-colors duration-200 ${isActive('/link')}`}>
-                            Links
-                        </Link>
-                    </li>
-                </ul>
+                <Link href="/blog" className={`transition-colors ${linkClass('/blog')}`}>
+                    Blog
+                </Link>
+                <Link href="/link" className={`transition-colors ${linkClass('/link')}`}>
+                    Links
+                </Link>
             </div>
         </nav>
     );
