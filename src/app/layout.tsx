@@ -17,9 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className={`min-h-screen bg-background font-sans antialiased ${inter.className}`}>
-        <MaxWidthWrapper className="flex flex-col items-center justify-between py-24 w-full max-w-2xl">
-          <header className="text-center mb-6">
+      <body className={`min-h-screen font-sans antialiased ${inter.className}`}>
+        <MaxWidthWrapper className="flex flex-col items-center justify-between py-16 md:py-24 w-full max-w-2xl">
+          <header className="text-center mb-8">
             <Navbar />
           </header>
           {children}

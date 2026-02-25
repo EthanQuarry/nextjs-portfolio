@@ -3,36 +3,37 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
-import CustomLink from '@/components/ui/link';
 
 const Navbar: React.FC = () => {
     const pathname = usePathname()
 
     const isActive = (path: string) => {
-        return pathname === path ? 'opacity-100' : 'opacity-60 hover:opacity-100';
+        return pathname === path
+            ? 'text-[var(--text-primary)]'
+            : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]';
     };
 
     return (
         <nav className="py-4">
             <div className="container mx-auto flex flex-col items-center">
-                <Link href="/" className="text-2xl text-white mb-4">
+                <Link href="/" className="text-xl font-semibold tracking-tight text-white mb-4">
                     Ethan Quarry
                 </Link>
-                <ul className="flex space-x-6">
+                <ul className="flex space-x-6 text-sm">
                     <li>
-                        <CustomLink href="/quotes" className={isActive('/quotes')}>
+                        <Link href="/quotes" className={`transition-colors duration-200 ${isActive('/quotes')}`}>
                             Quotes
-                        </CustomLink>
+                        </Link>
                     </li>
                     <li>
-                        <CustomLink href="/blog" className={isActive('/blog')}>
+                        <Link href="/blog" className={`transition-colors duration-200 ${isActive('/blog')}`}>
                             Blog
-                        </CustomLink>
+                        </Link>
                     </li>
                     <li>
-                        <CustomLink href="/link" className={isActive('/link')}>
-                            Useful Links
-                        </CustomLink>
+                        <Link href="/link" className={`transition-colors duration-200 ${isActive('/link')}`}>
+                            Links
+                        </Link>
                     </li>
                 </ul>
             </div>
