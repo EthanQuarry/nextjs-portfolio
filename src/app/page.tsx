@@ -108,7 +108,7 @@ export default function Home() {
           Highlights
         </p>
         <Achievements achievements={[
-          { title: "HackEurope 2026", description: "3rd place with OrbitalShield, €2K from SIG", link: "https://hackeurope.dev" },
+          { title: "HackEurope 2026", description: "3rd place with OrbitalShield, €2K from SIG", link: "https://www.hackeurope.com/" },
           { title: "Popcorn", description: `Growth engineer, ${popcornMonths} months`, link: "https://www.popcorn.space" },
           { title: "Cyntex.ai", description: "AI Receptionist startup ($40K+ in credits)", link: "https://cyntex.ai" },
           { title: "YC AI Startup School", description: "Cool talks, met Sam Altman", link: "https://www.linkedin.com/posts/ethanquarry_what-a-fcking-week-from-meeting-sam-altman-activity-7341316035012104192-jZjQ" },
