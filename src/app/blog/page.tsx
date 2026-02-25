@@ -6,21 +6,32 @@ export default function BlogPage() {
     const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
 
     return (
-        <ul className="space-y-4">
-            {posts.map((post) => (
-                <li key={post.slug} className="border-b pb-4">
-                    <Link href={`/blog/${post.slugAsParams}`} className="block">
-                        <h2 className="text-xl font-semibold transition-colors">{post.title}</h2>
-                        <time dateTime={post.date} className="text-sm text-gray-500">
+        <div className="w-full">
+            <p className="text-[11px] uppercase tracking-[0.15em] text-[#444] mb-8 font-medium">
+                Writing
+            </p>
+            <div className="space-y-1">
+                {posts.map((post) => (
+                    <div key={post.slug} className="flex justify-between items-baseline py-2">
+                        <Link
+                            href={`/blog/${post.slugAsParams}`}
+                            className="text-[14px] text-[#ededed] hover:text-white transition-colors"
+                        >
+                            {post.title}
+                        </Link>
+                        <time
+                            dateTime={post.date}
+                            className="text-[12px] text-[#333] shrink-0 ml-4 tabular-nums"
+                        >
                             {new Date(post.date).toLocaleDateString('en-US', {
                                 year: 'numeric',
                                 month: 'long',
                                 day: 'numeric',
                             })}
                         </time>
-                    </Link>
-                </li>
-            ))}
-        </ul>
+                    </div>
+                ))}
+            </div>
+        </div>
     );
 }

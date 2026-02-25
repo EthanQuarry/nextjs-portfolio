@@ -3,8 +3,10 @@ import RecentPosts from "@/components/content/posts";
 import Achievements from "@/components/content/achievements";
 import { allPosts } from 'contentlayer/generated';
 import { Post } from '@/types/index';
-import { compareDesc } from 'date-fns';
+import { compareDesc, differenceInMonths } from 'date-fns';
 import Link from 'next/link';
+
+const POPCORN_START = new Date('2025-09-01');
 
 export default function Home() {
   const posts: Post[] = allPosts.map(post => ({
@@ -12,13 +14,15 @@ export default function Home() {
     body: { raw: post.body?.raw ?? '', html: post.body?.raw ?? '' }
   })).sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
 
+  const popcornMonths = differenceInMonths(new Date(), POPCORN_START);
+
   return (
     <main className="w-full">
       {/* Bio */}
       <section className="mb-16">
         <p className="font-serif text-[16px] leading-[1.8] text-[#999]">
           Nineteen-year-old software engineer studying at Trinity College Dublin.
-          I like programming &amp; selling. Currently five months in as a growth engineer
+          I like programming &amp; selling. Currently {popcornMonths} months in as a growth engineer
           at{' '}
           <Link
             href="https://www.popcorn.space"
@@ -81,7 +85,7 @@ export default function Home() {
         </p>
 
         <Link
-          href="https://lnkd.in/ee4a4j7m"
+          href="http://52.31.207.242/"
           target="_blank"
           className="inline-flex items-center gap-1.5 text-[13px] text-[#999] hover:text-white transition-colors mt-3 border-b border-[#333] hover:border-[#666] pb-px"
         >
@@ -104,8 +108,8 @@ export default function Home() {
           Highlights
         </p>
         <Achievements achievements={[
-          { title: "HackEurope 2026", description: "3rd place with OrbitalShield, €2K from SIG", link: "https://lnkd.in/ee4a4j7m" },
-          { title: "Popcorn", description: "Growth engineer, 5 months", link: "https://www.popcorn.space" },
+          { title: "HackEurope 2026", description: "3rd place with OrbitalShield, €2K from SIG", link: "https://hackeurope.dev" },
+          { title: "Popcorn", description: `Growth engineer, ${popcornMonths} months`, link: "https://www.popcorn.space" },
           { title: "Cyntex.ai", description: "AI Receptionist startup ($40K+ in credits)", link: "https://cyntex.ai" },
           { title: "YC AI Startup School", description: "Cool talks, met Sam Altman", link: "https://www.linkedin.com/posts/ethanquarry_what-a-fcking-week-from-meeting-sam-altman-activity-7341316035012104192-jZjQ" },
           { title: "HackIreland", description: "Selected from 500+ applicants (27% acceptance)", link: "https://hackireland.com" },

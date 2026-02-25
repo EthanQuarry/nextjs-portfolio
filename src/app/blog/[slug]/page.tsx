@@ -17,20 +17,17 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
     const post = allPosts.find((post) => post.slugAsParams === params.slug);
     if (!post) throw new Error(`Post not found for slug: ${params.slug}`)
 
-    if (!post) {
-        // Handle the case when the post is not found
-        return <div>Post not found</div>;
-    }
     return (
-        <article className="mx-auto max-w-xl">
-            <div className="flex flex-col items-end mb-8 text-center">
-
-                <h1 className="text-2xl">{post.title}</h1>
-                <time dateTime={post.date} className="mb-1 text-[#4e4343] text-xs ">
+        <article className="w-full">
+            <div className="mb-10">
+                <h1 className="text-[22px] font-semibold text-white tracking-[-0.02em] mb-2">
+                    {post.title}
+                </h1>
+                <time dateTime={post.date} className="text-[12px] text-[#444]">
                     {format(parseISO(post.date), 'LLLL d, yyyy')}
                 </time>
             </div>
-            <div className="px-[.8rem] pb-10 md:px-8">
+            <div className="font-serif text-[15px] leading-[1.85] text-[#999]">
                 <Mdx code={post.body.code} />
             </div>
         </article>

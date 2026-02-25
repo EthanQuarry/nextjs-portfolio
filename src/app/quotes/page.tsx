@@ -1,6 +1,4 @@
-import LightText from "@/components/ui/light-text"
-import CustomLink from "@/components/ui/link"
-
+import Link from 'next/link';
 
 const quotes = [
     { text: "Do not despair. I know you will not despair. You have a manly and a proud heart. A proud heart can survive failure because such a failure does not prick its pride. It is more difficult and more bitter when a man fails alone.", author: "Chinua Achebe" },
@@ -16,8 +14,11 @@ const quotes = [
 
 export default function QuotesPage() {
     return (
-        <div className="max-w-3xl mx-auto px-4 py-8">
-            <div className="space-y-8">
+        <div className="w-full">
+            <p className="text-[11px] uppercase tracking-[0.15em] text-[#444] mb-8 font-medium">
+                Quotes
+            </p>
+            <div className="space-y-10">
                 {quotes.map((quote, index) => (
                     <QuoteCard key={index} {...quote} />
                 ))}
@@ -28,12 +29,17 @@ export default function QuotesPage() {
 
 function QuoteCard({ text, author }: { text: string, author: string }) {
     return (
-        <div className="flex flex-col items-end">
-            <LightText className="text-[#9c9292] self-start">"{text}"</LightText>
-            <CustomLink
+        <div>
+            <p className="font-serif text-[15px] leading-[1.85] text-[#888] italic">
+                &ldquo;{text}&rdquo;
+            </p>
+            <Link
                 href={`https://www.google.com/search?q=${author}`}
                 target="_blank"
-                className="text-md">- {author}</CustomLink>
+                className="text-[13px] text-[#555] hover:text-[#999] transition-colors mt-2 inline-block"
+            >
+                &mdash; {author}
+            </Link>
         </div>
     )
 }
