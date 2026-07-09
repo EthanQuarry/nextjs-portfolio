@@ -3,10 +3,8 @@ import RecentPosts from "@/components/content/posts";
 import Achievements from "@/components/content/achievements";
 import { allPosts } from 'contentlayer/generated';
 import { Post } from '@/types/index';
-import { compareDesc, differenceInMonths } from 'date-fns';
+import { compareDesc } from 'date-fns';
 import Link from 'next/link';
-
-const POPCORN_START = new Date('2025-09-01');
 
 export default function Home() {
   const posts: Post[] = allPosts.map(post => ({
@@ -14,23 +12,29 @@ export default function Home() {
     body: { raw: post.body?.raw ?? '', html: post.body?.raw ?? '' }
   })).sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
 
-  const popcornMonths = differenceInMonths(new Date(), POPCORN_START);
-
   return (
     <main className="w-full">
       {/* Bio */}
       <section className="mb-16">
         <p className="font-serif text-[16px] leading-[1.8] text-[#999]">
           Nineteen-year-old software engineer studying at Trinity College Dublin.
-          I like programming &amp; selling. Currently {popcornMonths} months in as a growth engineer
-          at{' '}
+          I like programming &amp; selling. Currently in{' '}
           <Link
-            href="https://www.popcorn.space"
+            href="https://joinpatch.org"
             target="_blank"
             className="text-[#ccc] hover:text-white transition-colors border-b border-[#333] hover:border-[#666]"
           >
-            Popcorn
-          </Link>.
+            Patch
+          </Link>
+          , Dublin — an OpenAI &amp; Stripe-funded programme — building{' '}
+          <Link
+            href="https://tryjake.ai"
+            target="_blank"
+            className="text-[#ccc] hover:text-white transition-colors border-b border-[#333] hover:border-[#666]"
+          >
+            Jake
+          </Link>
+          , an AI-native customer communications platform.
         </p>
       </section>
 
@@ -109,7 +113,7 @@ export default function Home() {
         </p>
         <Achievements achievements={[
           { title: "HackEurope 2026", description: "3rd place with OrbitalShield, €2K from SIG", link: "https://www.hackeurope.com/" },
-          { title: "Popcorn", description: `Growth engineer, ${popcornMonths} months`, link: "https://www.popcorn.space" },
+          { title: "Jake", description: "AI-native customer comms. Patch programme, Dublin", link: "https://tryjake.ai" },
           { title: "Cyntex.ai", description: "AI Receptionist startup ($40K+ in credits)", link: "https://cyntex.ai" },
           { title: "YC AI Startup School", description: "Cool talks, met Sam Altman", link: "https://www.linkedin.com/posts/ethanquarry_what-a-fcking-week-from-meeting-sam-altman-activity-7341316035012104192-jZjQ" },
           { title: "HackIreland", description: "Selected from 500+ applicants (27% acceptance)", link: "https://hackireland.com" },
