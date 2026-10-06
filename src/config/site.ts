@@ -1,46 +1,16 @@
-import { SidebarNavItem, SiteConfig } from "@/types";
+import { SiteConfig } from "@/types";
 
 const site_url = process.env.NEXT_PUBLIC_APP_URL;
 
 export const siteConfig: SiteConfig = {
     name: "Ethan Quarry",
     description:
-        "Ethan Quarry - Software Engineer",
-    url: site_url || "http://localhost:3000",
+        "Software engineer turned operator. Full-stack and AI engineering, growth and funnel analytics. Dublin, Ireland.",
+    url: site_url || "https://ethanquarry.com",
     ogImage: `${site_url}/_static/og.jpg`,
     links: {
-        twitter: "http://localhost:3000",
-        github: "http://localhost:3000",
+        twitter: "https://www.linkedin.com/in/ethanquarry",
+        github: "https://github.com/EthanQuarry",
     },
-    mailSupport: "dev.ethanquarry@gmail.com",
+    mailSupport: "me@ethanquarry.com",
 };
-
-export const footerLinks: SidebarNavItem[] = [
-    {
-        title: "Ethan Quarry",
-        items: [
-            { title: "About", href: "#" },
-            { title: "Enterprise", href: "#" },
-            { title: "Terms", href: "/terms" },
-            { title: "Privacy", href: "/privacy" },
-        ],
-    },
-    {
-        title: "Product",
-        items: [
-            { title: "Security", href: "#" },
-            { title: "Customization", href: "#" },
-            { title: "Customers", href: "#" },
-            { title: "Changelog", href: "#" },
-        ],
-    },
-    {
-        title: "Docs",
-        items: [
-            { title: "Introduction", href: "#" },
-            { title: "Installation", href: "#" },
-            { title: "Components", href: "#" },
-            { title: "Code Blocks", href: "#" },
-        ],
-    },
-];
