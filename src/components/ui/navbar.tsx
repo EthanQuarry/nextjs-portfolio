@@ -21,9 +21,6 @@ const Navbar: React.FC = () => {
                 <Link href="/quotes" className={`transition-colors ${linkClass('/quotes')}`}>
                     Quotes
                 </Link>
-                <Link href="/blog" className={`transition-colors ${linkClass('/blog')}`}>
-                    Blog
-                </Link>
                 <Link href="/link" className={`transition-colors ${linkClass('/link')}`}>
                     Links
                 </Link>

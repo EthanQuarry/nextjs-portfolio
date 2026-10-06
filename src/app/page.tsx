@@ -1,27 +1,17 @@
 'use client';
-import RecentPosts from "@/components/content/posts";
 import Achievements from "@/components/content/achievements";
 import Experience from "@/components/content/experience";
-import { allPosts } from 'contentlayer/generated';
-import { Post } from '@/types/index';
-import { compareDesc } from 'date-fns';
 import Link from 'next/link';
 
 export default function Home() {
-  const posts: Post[] = allPosts.map(post => ({
-    ...post,
-    body: { raw: post.body?.raw ?? '', html: post.body?.raw ?? '' }
-  })).sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
-
   return (
     <main className="w-full">
       {/* Bio */}
       <section className="mb-16">
         <p className="font-serif text-[16px] leading-[1.8] text-[#999]">
-          Software engineer turned operator. Trained in full-stack and AI engineering
-          &mdash; TypeScript, Next.js, Python, AWS serverless &mdash; and now equally at
-          home in growth, funnel analytics and the product decisions in between. Shipped
-          production LLM agents at three startups before turning 20, most recently{' '}
+          I like programming and selling, which is an odd pair and has worked out so far.
+          The last couple of years have mostly been AI agents in production at startups,
+          most recently{' '}
           <Link
             href="https://tryjake.ai"
             target="_blank"
@@ -37,7 +27,9 @@ export default function Home() {
           >
             Patch
           </Link>
-          . Left Trinity College Dublin to work full-time. Open to what&apos;s next &mdash;{' '}
+          . Before that I built an AI maths tutor for the Leaving Cert that made &euro;400
+          and got me my first engineering job with no degree. Left Trinity to do this full
+          time. Looking for the next thing &mdash;{' '}
           <Link
             href="mailto:me@ethanquarry.com"
             className="text-[#ccc] hover:text-white transition-colors border-b border-[#333] hover:border-[#666]"
@@ -128,6 +120,7 @@ export default function Home() {
             place: "Dublin",
             dates: "Jul — Aug 2026",
             description: "Selected for Ireland's programme for exceptional young technologists, backed by OpenAI and Stripe. Built Jake, an AI support agent that configures itself from a company's docs and ticket history and resolves routine tickets. Presented at Demo Day; drew inbound interest from companies including Manna.",
+            watch: { href: "https://www.youtube.com/watch?v=1h8588WXh-U", label: "Watch the Demo Day talk" },
           },
           {
             company: "Popcorn",
@@ -153,14 +146,6 @@ export default function Home() {
             description: "Designed and built an AI tutoring site for Leaving Cert maths. Grew it to 120 users and €400 ARR at 17. The launch video landed my first engineering job, with no degree.",
           },
         ]} />
-      </section>
-
-      {/* Writing */}
-      <section className="mb-20">
-        <p className="text-[11px] uppercase tracking-[0.15em] text-[#444] mb-6 font-medium">
-          Writing
-        </p>
-        <RecentPosts posts={posts} onPostView={() => { }} />
       </section>
 
       {/* Highlights */}

@@ -8,6 +8,7 @@ interface Role {
     place: string;
     dates: string;
     description: string;
+    watch?: { href: string; label: string };
 }
 
 const Experience: React.FC<{ roles: Role[] }> = ({ roles }) => {
@@ -35,6 +36,16 @@ const Experience: React.FC<{ roles: Role[] }> = ({ roles }) => {
                     <p className="font-serif text-[15px] leading-[1.85] text-[#888] mt-3">
                         {item.description}
                     </p>
+                    {item.watch && (
+                        <Link
+                            href={item.watch.href}
+                            target="_blank"
+                            className="inline-flex items-center gap-1.5 text-[13px] text-[#999] hover:text-white transition-colors mt-3 border-b border-[#333] hover:border-[#666] pb-px"
+                        >
+                            {item.watch.label}
+                            <span className="text-[10px]">&#8599;</span>
+                        </Link>
+                    )}
                 </div>
             ))}
         </div>

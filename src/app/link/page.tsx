@@ -4,11 +4,10 @@ import Link from 'next/link'
 export default function LinkPage() {
     const links = [
         {
-            category: 'VC',
-            title: 'How to start your own VC fund',
-            link: 'https://www.nfx.com/post/how-to-start-your-own-vc-fund',
-            image: '/images/BG-3.png',
-            date: 'Oct 2024'
+            category: 'Talk',
+            title: 'Patch Demo Day — building Jake',
+            link: 'https://www.youtube.com/watch?v=1h8588WXh-U',
+            date: 'Aug 2026'
         }
     ]
     return (
@@ -33,15 +32,17 @@ export default function LinkPage() {
                                 {item.date}
                             </span>
                         </div>
-                        <div className="overflow-hidden rounded-lg">
-                            <Image
-                                src={item.image}
-                                alt={item.title}
-                                className="object-cover w-full opacity-80 group-hover:opacity-100 transition-opacity"
-                                width={620}
-                                height={320}
-                            />
-                        </div>
+                        {'image' in item && typeof item.image === 'string' && (
+                            <div className="overflow-hidden rounded-lg">
+                                <Image
+                                    src={item.image}
+                                    alt={item.title}
+                                    className="object-cover w-full opacity-80 group-hover:opacity-100 transition-opacity"
+                                    width={620}
+                                    height={320}
+                                />
+                            </div>
+                        )}
                         <p className="text-[11px] uppercase tracking-[0.1em] text-[#333] mt-2">
                             {item.category}
                         </p>
